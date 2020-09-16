@@ -24,7 +24,7 @@ while (input !== null) {
   if (Number(input) !== NaN && Number(input) !== 0) {
     alert('Было введено не число, попробуйте еще раз');
     total += Number(input);
-  }
+  }00
 }
 
 alert(`Общая сумма чисел равна ${total}`);
