@@ -17,14 +17,15 @@
 let input;
 let total = 0;
 while (input !== null) {
-  input = prompt('Введи число, пжлста!');
-  //   total += Number(input);
-  //   input = Number(input);
-  console.log(Number(input));
-  if (Number(input) !== NaN && Number(input) !== 0) {
-    alert('Было введено не число, попробуйте еще раз');
-    total += Number(input);
-  }00
-}
+  input = prompt('Введите число, пожалуйста!');
 
+  // console.log(input);//для визуализации
+  // console.log(Number(input));//для визуализации
+  //Number.isNaN(Number(input))- Для всех значений Number(input) кроме NaN, при передаче в Number.isNaN(val) вернёт false
+  if (Number.isNaN(Number(input))) {
+    alert('Было введено не число, попробуйте еще раз');
+  } else {
+    total += Number(input);
+  }
+}
 alert(`Общая сумма чисел равна ${total}`);
